@@ -1,0 +1,100 @@
+<?php
+include('header.php');  // Incluir el header con la barra de navegación
+
+require_once 'config.php';  // Incluir la configuración de la base de datos
+
+// Auth is already enforced globally by config.php -> includes/auth_check.php.
+// $_SESSION['user_id'] is guaranteed to be set at this point.
+
+// Obtener los datos del usuario logueado
+$user_id = intval($_SESSION['user_id']);
+$stmt = $conn->prepare("SELECT id_usuario, correo_electronico, nombre, rol, contrasena FROM Usuarios WHERE id_usuario = ?");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+$stmt->close();
+
+// Actualizar perfil
+$message = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nombre = trim($_POST['nombre'] ?? '');
+    $correo = trim($_POST['correo'] ?? '');
+
+    if ($user['rol'] == 'Administrador' && isset($_POST['rol'])) {
+        // Whitelist ENUM values — never trust $_POST directly.
+        $allowed_roles = ['Administrador', 'Usuario', 'Empleado'];
+        $rol = in_array($_POST['rol'], $allowed_roles, true) ? $_POST['rol'] : 'Usuario';
+        if (!empty($_POST['password'])) {
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $stmt = $conn->prepare("UPDATE Usuarios SET nombre=?, correo_electronico=?, contrasena=?, rol=? WHERE id_usuario=?");
+            $stmt->bind_param("ssssi", $nombre, $correo, $password, $rol, $user_id);
+        } else {
+            $stmt = $conn->prepare("UPDATE Usuarios SET nombre=?, correo_electronico=?, rol=? WHERE id_usuario=?");
+            $stmt->bind_param("sssi", $nombre, $correo, $rol, $user_id);
+        }
+    } elseif (!empty($_POST['password'])) {
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $stmt = $conn->prepare("UPDATE Usuarios SET nombre=?, correo_electronico=?, contrasena=? WHERE id_usuario=?");
+        $stmt->bind_param("sssi", $nombre, $correo, $password, $user_id);
+    } else {
+        $stmt = $conn->prepare("UPDATE Usuarios SET nombre=?, correo_electronico=? WHERE id_usuario=?");
+        $stmt->bind_param("ssi", $nombre, $correo, $user_id);
+    }
+
+    if ($stmt->execute()) {
+        $message = "<div class='alert alert-success'>Perfil actualizado correctamente.</div>";
+        $_SESSION['username'] = $correo;
+    } else {
+        $message = "<div class='alert alert-danger'>Error al actualizar el perfil.</div>";
+    }
+    $stmt->close();
+}
+?>
+
+<link rel="stylesheet" href="styles/perfil.css">
+
+<div class="container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+    <h2>Mi Perfil</h2>
+    <?php
+        // SECURITY: $message contains only developer-controlled success/error strings.
+        // No user input is interpolated. Safe to echo without escaping.
+        echo $message;
+    ?>
+    <form action="perfil.php" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo htmlspecialchars($user['nombre']); ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" value="<?php echo htmlspecialchars($user['correo_electronico']); ?>" required>
+        </div>
+        
+        <!-- Campo para cambiar la contraseña -->
+        <div class="form-group">
+            <label for="password">Contraseña (dejar en blanco para mantener la actual)</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+
+        <!-- Si el usuario es Administrador, mostrar campos adicionales -->
+        <?php if ($user['rol'] == 'Administrador'): ?>
+            <div class="form-group">
+                <label for="rol">Rol</label>
+                <select class="form-control" id="rol" name="rol">
+                    <option value="Administrador" <?php echo $user['rol'] == 'Administrador' ? 'selected' : ''; ?>>Administrador</option>
+                    <option value="Usuario" <?php echo $user['rol'] == 'Usuario' ? 'selected' : ''; ?>>Usuario</option>
+                </select>
+            </div>
+        <?php endif; ?>
+
+        <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
+    </form>
+</div>
+
+<?php
+include('footer.php');  // Incluir el footer
+?>

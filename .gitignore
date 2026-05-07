@@ -1,0 +1,48 @@
+# ── Credentials & environment ──────────────────────────────────────────────
+.env
+*.env.local
+
+# ── PHP vendor (run: composer install) ─────────────────────────────────────
+vendor/
+
+# ── User-uploaded content ───────────────────────────────────────────────────
+assets/images/profile/
+uploads/
+
+# ── Database backups ────────────────────────────────────────────────────────
+database/backups/
+backups/
+*.sql.gz
+*.sql.bak
+
+# ── Dev / IDE artifacts ─────────────────────────────────────────────────────
+.claude/
+.agents/
+.playwright-mcp/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Reference / template directories (not part of the app) ─────────────────
+caveman/
+free-tailwind-admin-dashboard-template-main/
+endpointsPruebas/
+Nicko12/
+Xalpa/
+
+# ── IDE / tooling ────────────────────────────────────────────────────────────
+.obsidian/
+.kiro/
+.vscode/
+.idea/
+
+# ── Logs & temporary files ──────────────────────────────────────────────────
+*.log
+/tmp/
+php_errors.log
+
+# ── OS artifacts ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

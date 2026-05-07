@@ -1,0 +1,5 @@
+id_compra,id_proveedor,nombre_producto,cantidad_comprada,fecha_compra,monto_total,estado
+12,6,Arepa,0,"2024-11-11 08:41:40",150.00,"En Curso"
+13,6,Pan,20,"2024-11-11 08:48:47",1500.00,"En Curso"
+16,8,vinil,30,"2024-11-11 13:49:46",800.00,"En Curso"
+17,7,vinil,25,"2024-11-11 13:51:19",650.00,"En Curso"

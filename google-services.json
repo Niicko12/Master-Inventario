@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "293142780579",
+    "project_id": "comercioelectronico-811d2",
+    "storage_bucket": "comercioelectronico-811d2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293142780579:android:6fad3b87cb5c6e9077bd16",
+        "android_client_info": {
+          "package_name": "com.example.comercio_electronico_nuevo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-UyiOVrrdJ83IR67BvR28kkiUEX8LtDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293142780579:android:101219c75eea2cfd77bd16",
+        "android_client_info": {
+          "package_name": "com.example.comercioeectronico"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-UyiOVrrdJ83IR67BvR28kkiUEX8LtDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

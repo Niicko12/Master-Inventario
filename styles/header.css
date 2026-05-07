@@ -1,0 +1,205 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --header-height: 60px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: var(--header-height);
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Espacio global después del header */
+main {
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 20px;
+}
+
+/* Brand */
+.navbar-brand {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 150px;
+}
+
+/* Container for nav items except logout */
+.nav-items {
+    display: flex;
+    gap: 15px;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+/* Individual nav item */
+.nav-item {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    color: #0056b3;
+}
+
+/* Dropdown menu for "Administración" */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 8px 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #e2e6ea;
+    color: #0056b3;
+}
+
+/* "Cerrar Sesión" button always to the right */
+.logout-button {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+/* Hamburger Button - Hidden by default */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-button svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-items {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Estilos específicos para el dropdown en móvil */
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        padding: 10px 20px;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .logout-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+}

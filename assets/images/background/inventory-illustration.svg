@@ -1,0 +1,118 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background glow circles -->
+  <circle cx="240" cy="190" r="160" fill="rgba(93,135,255,0.06)"/>
+  <circle cx="240" cy="190" r="110" fill="rgba(93,135,255,0.06)"/>
+
+  <!-- ── SHELF UNIT (back) ── -->
+  <rect x="60" y="100" width="360" height="12" rx="4" fill="#1e2d5a"/>
+  <rect x="60" y="185" width="360" height="12" rx="4" fill="#1e2d5a"/>
+  <rect x="60" y="270" width="360" height="12" rx="4" fill="#1e2d5a"/>
+  <!-- vertical poles -->
+  <rect x="60"  y="100" width="10" height="182" rx="3" fill="#1e2d5a"/>
+  <rect x="205" y="100" width="10" height="182" rx="3" fill="#1e2d5a"/>
+  <rect x="410" y="100" width="10" height="182" rx="3" fill="#1e2d5a"/>
+
+  <!-- ── TOP SHELF — boxes ── -->
+  <!-- Box 1: blue -->
+  <rect x="78"  y="115" width="54" height="66" rx="6" fill="#5d87ff"/>
+  <rect x="78"  y="115" width="54" height="18" rx="6" fill="#4a72e8"/>
+  <rect x="99"  y="127" width="12" height="4"  rx="2" fill="white" opacity=".6"/>
+  <!-- Box 2: cyan -->
+  <rect x="142" y="120" width="46" height="61" rx="6" fill="#49beff"/>
+  <rect x="142" y="120" width="46" height="16" rx="6" fill="#38aaee"/>
+  <rect x="159" y="131" width="12" height="4"  rx="2" fill="white" opacity=".6"/>
+  <!-- Box 3: green -->
+  <rect x="222" y="112" width="60" height="69" rx="6" fill="#13deb9"/>
+  <rect x="222" y="112" width="60" height="18" rx="6" fill="#10c9a7"/>
+  <rect x="245" y="124" width="14" height="4"  rx="2" fill="white" opacity=".6"/>
+  <!-- Box 4: orange -->
+  <rect x="294" y="118" width="50" height="63" rx="6" fill="#ffae1f"/>
+  <rect x="294" y="118" width="50" height="16" rx="6" fill="#ee9f10"/>
+  <rect x="313" y="129" width="12" height="4"  rx="2" fill="white" opacity=".6"/>
+  <!-- Box 5: purple -->
+  <rect x="356" y="115" width="46" height="66" rx="6" fill="#7460ee"/>
+  <rect x="356" y="115" width="46" height="18" rx="6" fill="#6350db"/>
+  <rect x="373" y="127" width="12" height="4"  rx="2" fill="white" opacity=".6"/>
+
+  <!-- ── MIDDLE SHELF — boxes ── -->
+  <!-- Box A: red/coral -->
+  <rect x="78"  y="198" width="44" height="64" rx="6" fill="#fa896b"/>
+  <rect x="78"  y="198" width="44" height="16" rx="6" fill="#e87055"/>
+  <rect x="94"  y="209" width="12" height="4"  rx="2" fill="white" opacity=".6"/>
+  <!-- Box B: blue small -->
+  <rect x="132" y="208" width="36" height="54" rx="6" fill="#5d87ff" opacity=".75"/>
+  <rect x="132" y="208" width="36" height="14" rx="6" fill="#4a72e8" opacity=".75"/>
+  <!-- Box C: big green -->
+  <rect x="222" y="196" width="66" height="66" rx="6" fill="#13deb9" opacity=".8"/>
+  <rect x="222" y="196" width="66" height="18" rx="6" fill="#10c9a7" opacity=".8"/>
+  <rect x="247" y="208" width="16" height="4"  rx="2" fill="white" opacity=".6"/>
+  <!-- Box D: yellow -->
+  <rect x="300" y="200" width="50" height="62" rx="6" fill="#ffae1f" opacity=".85"/>
+  <rect x="300" y="200" width="50" height="16" rx="6" fill="#ee9f10" opacity=".85"/>
+  <!-- Box E: cyan -->
+  <rect x="362" y="202" width="40" height="60" rx="6" fill="#49beff" opacity=".8"/>
+  <rect x="362" y="202" width="40" height="16" rx="6" fill="#38aaee" opacity=".8"/>
+
+  <!-- ── CLIPBOARD / DOCUMENT ── -->
+  <rect x="148" y="195" width="60" height="80" rx="6" fill="white" stroke="#dfe5ef" stroke-width="1.5"/>
+  <rect x="163" y="188" width="30" height="12" rx="4" fill="#5d87ff"/>
+  <!-- lines on clipboard -->
+  <rect x="156" y="218" width="36" height="4" rx="2" fill="#dfe5ef"/>
+  <rect x="156" y="228" width="28" height="4" rx="2" fill="#dfe5ef"/>
+  <rect x="156" y="238" width="32" height="4" rx="2" fill="#dfe5ef"/>
+  <rect x="156" y="248" width="20" height="4" rx="2" fill="#5d87ff" opacity=".5"/>
+  <!-- checkmarks -->
+  <text x="154" y="221" font-size="7" fill="#13deb9" font-family="sans-serif">✓</text>
+  <text x="154" y="231" font-size="7" fill="#13deb9" font-family="sans-serif">✓</text>
+  <text x="154" y="241" font-size="7" fill="#ffae1f" font-family="sans-serif">✓</text>
+
+  <!-- ── BAR CHART (bottom right) ── -->
+  <rect x="240" y="285" width="180" height="2" rx="1" fill="#dfe5ef"/>
+  <!-- bars -->
+  <rect x="255" y="258" width="20" height="27" rx="3" fill="#5d87ff" opacity=".3"/>
+  <rect x="283" y="248" width="20" height="37" rx="3" fill="#5d87ff" opacity=".5"/>
+  <rect x="311" y="237" width="20" height="48" rx="3" fill="#5d87ff" opacity=".7"/>
+  <rect x="339" y="245" width="20" height="40" rx="3" fill="#5d87ff" opacity=".6"/>
+  <rect x="367" y="228" width="20" height="57" rx="3" fill="#5d87ff"/>
+  <!-- chart label -->
+  <text x="252" y="298" font-size="9" fill="#8babc0" font-family="sans-serif">ENE</text>
+  <text x="280" y="298" font-size="9" fill="#8babc0" font-family="sans-serif">FEB</text>
+  <text x="308" y="298" font-size="9" fill="#8babc0" font-family="sans-serif">MAR</text>
+  <text x="336" y="298" font-size="9" fill="#8babc0" font-family="sans-serif">ABR</text>
+  <text x="364" y="298" font-size="9" fill="#5d87ff" font-family="sans-serif" font-weight="bold">MAY</text>
+
+  <!-- ── SCAN / BARCODE ICON (lower left) ── -->
+  <rect x="68"  y="290" width="100" height="60" rx="8" fill="white" stroke="#dfe5ef" stroke-width="1.5"/>
+  <!-- barcode lines -->
+  <rect x="78"  y="300" width="3" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="84"  y="300" width="5" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="92"  y="300" width="2" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="97"  y="300" width="4" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="104" y="300" width="3" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="110" y="300" width="6" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="119" y="300" width="2" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="124" y="300" width="4" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="131" y="300" width="3" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="137" y="300" width="5" height="30" rx="1" fill="#1e2d5a"/>
+  <rect x="145" y="300" width="3" height="30" rx="1" fill="#1e2d5a"/>
+  <!-- scan laser line -->
+  <rect x="73"  y="315" width="110" height="2" rx="1" fill="#fa896b" opacity=".8"/>
+  <!-- scan icon top -->
+  <text x="95" y="345" font-size="8" fill="#8babc0" font-family="sans-serif">ESCANEAR</text>
+
+  <!-- ── FLOATING BADGES ── -->
+  <!-- Stock badge -->
+  <rect x="30" y="140" width="56" height="28" rx="10" fill="#5d87ff"/>
+  <text x="37" y="150" font-size="7" fill="white" font-family="sans-serif" font-weight="bold">STOCK</text>
+  <text x="37" y="162" font-size="9" fill="white" font-family="sans-serif" font-weight="bold">+142</text>
+
+  <!-- Alert badge -->
+  <rect x="395" y="245" width="60" height="28" rx="10" fill="#fa896b"/>
+  <text x="400" y="255" font-size="7" fill="white" font-family="sans-serif">ALERTA</text>
+  <text x="403" y="267" font-size="9" fill="white" font-family="sans-serif" font-weight="bold">Stock↓</text>
+
+  <!-- Sale badge -->
+  <rect x="395" y="148" width="60" height="28" rx="10" fill="#13deb9"/>
+  <text x="403" y="158" font-size="7" fill="white" font-family="sans-serif">VENTAS</text>
+  <text x="404" y="170" font-size="9" fill="white" font-family="sans-serif" font-weight="bold">$48.5K</text>
+</svg>

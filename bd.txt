@@ -1,0 +1,90 @@
+-- Creación de la tabla Usuarios
+CREATE TABLE Usuarios (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    correo_electronico VARCHAR(100) UNIQUE,
+    contrasena VARCHAR(255),
+    rol ENUM('Administrador', 'Usuario', 'Empleado'),
+    estado ENUM('Activo', 'Inactivo'),
+    fecha_creacion DATETIME
+);
+
+-- Creación de la tabla Inventario
+CREATE TABLE Inventario (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_producto VARCHAR(100),
+    cantidad_disponible INT,
+    stock_minimo INT,
+    fecha_ultima_actualizacion DATETIME
+);
+
+-- Creación de la tabla Entradas_Inventario
+CREATE TABLE Entradas_Inventario (
+    id_entrada INT AUTO_INCREMENT PRIMARY KEY,
+    id_producto INT,
+    cantidad_entrada INT,
+    fecha_entrada DATETIME,
+    usuario_registro INT,
+    FOREIGN KEY (id_producto) REFERENCES Inventario(id_producto),
+    FOREIGN KEY (usuario_registro) REFERENCES Usuarios(id_usuario)
+);
+
+-- Creación de la tabla Salidas_Inventario
+CREATE TABLE Salidas_Inventario (
+    id_salida INT AUTO_INCREMENT PRIMARY KEY,
+    id_producto INT,
+    cantidad_salida INT,
+    fecha_salida DATETIME,
+    usuario_registro INT,
+    FOREIGN KEY (id_producto) REFERENCES Inventario(id_producto),
+    FOREIGN KEY (usuario_registro) REFERENCES Usuarios(id_usuario)
+);
+
+-- Creación de la tabla Ventas
+CREATE TABLE Ventas (
+    id_venta INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT,
+    fecha_venta DATETIME,
+    monto_total DECIMAL(10, 2),
+    FOREIGN KEY (id_cliente) REFERENCES Usuarios(id_usuario)
+);
+
+-- Creación de la tabla Detalle_Ventas
+CREATE TABLE Detalle_Ventas (
+    id_detalle INT AUTO_INCREMENT PRIMARY KEY,
+    id_venta INT,
+    id_producto INT,
+    cantidad_vendida INT,
+    precio_unitario DECIMAL(10, 2),
+    FOREIGN KEY (id_venta) REFERENCES Ventas(id_venta),
+    FOREIGN KEY (id_producto) REFERENCES Inventario(id_producto)
+);
+
+-- Creación de la tabla Proveedores
+CREATE TABLE Proveedores (
+    id_proveedor INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_proveedor VARCHAR(100),
+    telefono VARCHAR(15),
+    email VARCHAR(100),
+    direccion TEXT
+);
+
+-- Creación de la tabla Compras
+CREATE TABLE Compras (
+    id_compra INT AUTO_INCREMENT PRIMARY KEY,
+    id_proveedor INT,
+    fecha_compra DATETIME,
+    monto_total DECIMAL(10, 2),
+    FOREIGN KEY (id_proveedor) REFERENCES Proveedores(id_proveedor)
+);
+
+-- Creación de la tabla Detalle_Compras
+CREATE TABLE Detalle_Compras (
+    id_detalle INT AUTO_INCREMENT PRIMARY KEY,
+    id_compra INT,
+    id_producto INT,
+    cantidad_comprada INT,
+    precio_unitario DECIMAL(10, 2),
+    FOREIGN KEY (id_compra) REFERENCES Compras(id_compra),
+    FOREIGN KEY (id_producto) REFERENCES Inventario(id_producto)
+);
