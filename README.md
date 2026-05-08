@@ -70,7 +70,7 @@
 | 🚚 **Compras** | Órdenes de compra, gestión de proveedores y control de abastecimiento |
 | 👥 **Usuarios** | Roles jerárquicos (Administrador / Empleado / Usuario) con rate limiting |
 | 📊 **Dashboard** | KPIs en tiempo real, gráficas interactivas con Chart.js y tendencias |
-| 📋 **Reportes** | Exportación a PDF y Excel, reportes históricos y plantillas personalizadas |
+| 📋 **Reportes** | Exportación a PDF y CSV, reportes históricos y plantillas personalizadas |
 | 📄 **Documentos** | Gestión documental con historial de versiones |
 | 🗓️ **Agenda** | Calendario de eventos y tareas de mantenimiento |
 | ⚙️ **Configuración** | Tema, moneda, logo, banner y parámetros del sistema completamente personalizables |
@@ -97,7 +97,6 @@
 | **PHP 8.3** | Lógica de negocio (procedural modular) |
 | **MySQL 8.0** | Base de datos relacional con triggers |
 | **PHPMailer** | Envío de correos (SMTP / Gmail) |
-| **PhpSpreadsheet** | Exportación a Excel (.xlsx) |
 | **FPDF** | Generación de reportes PDF |
 
 ### Frontend
