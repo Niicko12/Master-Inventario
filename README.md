@@ -25,7 +25,7 @@
 ✅ Open Source (MIT)   — gratis para siempre, sin licencias mensuales
 ✅ Sin framework       — PHP puro, compatible con cualquier hosting cPanel
 ✅ UX Profesional      — diseño glassmorphism, dark mode, totalmente responsive
-✅ Seguridad Enterprise — 2FA, rate limiting, 11 tablas de auditoría con triggers
+✅ Seguridad Enterprise — rate limiting, 11 tablas de auditoría con triggers
 ```
 
 ---
@@ -68,13 +68,13 @@
 | 📦 **Inventario** | Control de stock en tiempo real con alertas de stock bajo y umbral configurable |
 | 🛒 **Ventas** | Registro de transacciones, detalle de venta y generación de facturas en PDF |
 | 🚚 **Compras** | Órdenes de compra, gestión de proveedores y control de abastecimiento |
-| 👥 **Usuarios** | Roles jerárquicos (Administrador / Empleado / Usuario), 2FA y rate limiting |
+| 👥 **Usuarios** | Roles jerárquicos (Administrador / Empleado / Usuario) con rate limiting |
 | 📊 **Dashboard** | KPIs en tiempo real, gráficas interactivas con Chart.js y tendencias |
 | 📋 **Reportes** | Exportación a PDF y Excel, reportes históricos y plantillas personalizadas |
 | 📄 **Documentos** | Gestión documental con historial de versiones |
 | 🗓️ **Agenda** | Calendario de eventos y tareas de mantenimiento |
 | ⚙️ **Configuración** | Tema, moneda, logo, banner y parámetros del sistema completamente personalizables |
-| 🔒 **Seguridad** | Protección contra SQL injection, CSRF, rate limiting por IP y cuenta, reCAPTCHA v3 |
+| 🔒 **Seguridad** | Protección contra SQL injection, CSRF, rate limiting por IP y cuenta |
 
 ---
 
@@ -82,9 +82,7 @@
 
 - ✅ **Prepared statements** en todas las consultas SQL (MySQLi)
 - ✅ **Rate limiting** por IP (20 fallos / 15 min) y por cuenta (escalado: 15 / 30 / 60 min)
-- ✅ **Autenticación de dos factores** (2FA) con código por correo
 - ✅ **Recuperación de contraseña** con token de un solo uso
-- ✅ **Google reCAPTCHA v3** en formularios de acceso
 - ✅ **Registro de intentos de inyección SQL** en tabla de auditoría
 - ✅ **Auditoría completa**: 11 tablas de historial + triggers automáticos en BD
 - ✅ **Roles y permisos** granulares por módulo
@@ -225,7 +223,7 @@ Todas las opciones del sistema se gestionan desde **Configuración → Sistema**
 
 ### v1.0 — Lanzamiento ✅
 - [x] 14 módulos funcionales completos (inventario, ventas, compras, proveedores, reportes, documentos, agenda, soporte, config)
-- [x] Seguridad enterprise: 2FA, rate limiting, 11 tablas de auditoría con triggers
+- [x] Seguridad enterprise: rate limiting, auditoría completa con 11 tablas y triggers
 - [x] UI profesional con dark mode, glassmorphism y responsive Bootstrap 5.3
 - [x] Documentación técnica completa (9,230+ líneas)
 
