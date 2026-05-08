@@ -1,16 +1,32 @@
 <div align="center">
 
+<img src="docs/screenshots/ss_home.png" alt="Master Inventario — Panel Principal" width="100%" />
+
 # 📦 Master Inventario
 
-**Sistema profesional de gestión de inventario, ventas y compras**
+**Sistema profesional de gestión de inventario, ventas y compras — auto-hospedado, open source, listo para PYMEs**
 
 [![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
 [![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://chartjs.org)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.0.0-5d87ff?style=for-the-badge)](https://github.com/Niicko12/Master-Inventario/releases)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](https://github.com/Niicko12/Master-Inventario/pulls)
 
 </div>
+
+---
+
+> **Master Inventario** es un sistema web completo de gestión de inventario pensado para pequeñas y medianas empresas que necesitan control profesional sin pagar licencias SaaS mensuales. Instalable en cualquier hosting compartido, con UI profesional, seguridad enterprise y auditoría completa.
+
+```
+✅ Auto-hospedado      — tus datos en tu servidor, cero dependencia cloud
+✅ Open Source (MIT)   — gratis para siempre, sin licencias mensuales
+✅ Sin framework       — PHP puro, compatible con cualquier hosting cPanel
+✅ UX Profesional      — diseño glassmorphism, dark mode, totalmente responsive
+✅ Seguridad Enterprise — 2FA, rate limiting, 11 tablas de auditoría con triggers
+```
 
 ---
 
@@ -19,27 +35,27 @@
 <table>
   <tr>
     <td align="center"><strong>🔐 Inicio de sesión</strong></td>
-    <td align="center"><strong>🏠 Panel principal</strong></td>
+    <td align="center"><strong>📊 Dashboard analítico</strong></td>
   </tr>
   <tr>
     <td><img src="docs/screenshots/ss_login.png" alt="Login" width="100%"/></td>
-    <td><img src="docs/screenshots/ss_home.png" alt="Home" width="100%"/></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>📊 Dashboard analítico</strong></td>
-    <td align="center"><strong>📦 Gestión de inventario</strong></td>
-  </tr>
-  <tr>
     <td><img src="docs/screenshots/ss_dashboard.png" alt="Dashboard" width="100%"/></td>
-    <td><img src="docs/screenshots/ss_inventario.png" alt="Inventario" width="100%"/></td>
   </tr>
   <tr>
+    <td align="center"><strong>📦 Gestión de inventario</strong></td>
     <td align="center"><strong>🛒 Ventas</strong></td>
-    <td align="center"><strong>📋 Reportes</strong></td>
   </tr>
   <tr>
+    <td><img src="docs/screenshots/ss_inventario.png" alt="Inventario" width="100%"/></td>
     <td><img src="docs/screenshots/ss_ventas.png" alt="Ventas" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>📋 Reportes</strong></td>
+    <td align="center"><strong>⚙️ Configuración del sistema</strong></td>
+  </tr>
+  <tr>
     <td><img src="docs/screenshots/ss_reportes.png" alt="Reportes" width="100%"/></td>
+    <td><img src="docs/screenshots/ss_config.png" alt="Configuración" width="100%"/></td>
   </tr>
 </table>
 
@@ -202,6 +218,28 @@ Todas las opciones del sistema se gestionan desde **Configuración → Sistema**
 | **Administrador** | Acceso total: usuarios, configuración, reportes, todos los módulos |
 | **Empleado** | Inventario, ventas, compras, proveedores, agenda |
 | **Usuario** | Solo lectura en módulos asignados |
+
+---
+
+## 🛣️ Roadmap
+
+### v1.0 — Lanzamiento ✅
+- [x] 14 módulos funcionales completos (inventario, ventas, compras, proveedores, reportes, documentos, agenda, soporte, config)
+- [x] Seguridad enterprise: 2FA, rate limiting, 11 tablas de auditoría con triggers
+- [x] UI profesional con dark mode, glassmorphism y responsive Bootstrap 5.3
+- [x] Documentación técnica completa (9,230+ líneas)
+
+### v1.1 — Próximamente
+- [ ] Notificaciones push para alertas de stock bajo
+- [ ] Escaneo QR/barcode vía cámara (QuaggaJS)
+- [ ] Dashboard personalizable con widgets drag & drop
+- [ ] Exportación directa a Google Sheets
+
+### v2.0 — Planificado
+- [ ] API REST documentada (OpenAPI/Swagger)
+- [ ] Módulo de facturación CFDI para México
+- [ ] Multi-sucursal con consolidación de inventario
+- [ ] Aplicación móvil (PWA)
 
 ---
 
