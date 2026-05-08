@@ -219,28 +219,6 @@ Todas las opciones del sistema se gestionan desde **Configuración → Sistema**
 
 ---
 
-## 🛣️ Roadmap
-
-### v1.0 — Lanzamiento ✅
-- [x] 14 módulos funcionales completos (inventario, ventas, compras, proveedores, reportes, documentos, agenda, soporte, config)
-- [x] Seguridad enterprise: rate limiting, auditoría completa con 11 tablas y triggers
-- [x] UI profesional con dark mode, glassmorphism y responsive Bootstrap 5.3
-- [x] Documentación técnica completa (9,230+ líneas)
-
-### v1.1 — Próximamente
-- [ ] Notificaciones push para alertas de stock bajo
-- [ ] Escaneo QR/barcode vía cámara (QuaggaJS)
-- [ ] Dashboard personalizable con widgets drag & drop
-- [ ] Exportación directa a Google Sheets
-
-### v2.0 — Planificado
-- [ ] API REST documentada (OpenAPI/Swagger)
-- [ ] Módulo de facturación CFDI para México
-- [ ] Multi-sucursal con consolidación de inventario
-- [ ] Aplicación móvil (PWA)
-
----
-
 ## 🤝 Contribuir
 
 Las contribuciones son bienvenidas.
