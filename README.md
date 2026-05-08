@@ -82,7 +82,6 @@
 
 - ✅ **Prepared statements** en todas las consultas SQL (MySQLi)
 - ✅ **Rate limiting** por IP (20 fallos / 15 min) y por cuenta (escalado: 15 / 30 / 60 min)
-- ✅ **Recuperación de contraseña** con token de un solo uso
 - ✅ **Registro de intentos de inyección SQL** en tabla de auditoría
 - ✅ **Auditoría completa**: 11 tablas de historial + triggers automáticos en BD
 - ✅ **Roles y permisos** granulares por módulo
@@ -96,7 +95,6 @@
 |------------|-----|
 | **PHP 8.3** | Lógica de negocio (procedural modular) |
 | **MySQL 8.0** | Base de datos relacional con triggers |
-| **PHPMailer** | Envío de correos (SMTP / Gmail) |
 | **FPDF** | Generación de reportes PDF |
 
 ### Frontend
@@ -146,7 +144,7 @@ composer install
 
 # 3. Copia y configura las variables de entorno
 cp .env.example .env
-# Edita .env con tus credenciales de BD y SMTP
+# Edita .env con tus credenciales de BD
 
 # 4. Importa el esquema de base de datos
 mysql -u root -p < bd.sql
@@ -197,7 +195,7 @@ Todas las opciones del sistema se gestionan desde **Configuración → Sistema**
 
 | Parámetro | Descripción |
 |-----------|-------------|
-| `nombre_instancia` | Nombre que aparece en la UI y correos |
+| `nombre_instancia` | Nombre que aparece en la UI |
 | `moneda_codigo` | Moneda del sistema (MXN, USD, EUR) |
 | `umbral_stock_bajo` | Número mínimo de unidades antes de alertar |
 | `banner_imagen` | Imagen de fondo de los módulos |
